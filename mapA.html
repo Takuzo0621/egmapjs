@@ -22,21 +22,21 @@ window.onload = function() {
 	var map = initMap('mapid')
 	map.setZoom(14)
 	map.panTo([ 26.336754, 127.800409 ]) // 現在地
-	map.addIcon(26.336754, 127.800409 , "現在地")
+	map.addIcon(26.336754, 127.800409 , "現在地","icon/walking.png",32)
 
 	// ルート探索
 	L.Routing.control({
 		waypoints: [
-			L.latLng(26.319017, 127.793763), // プラザハウスショッピングセンター
-			L.latLng(26.292814, 127.77723) // 普天満宮
+			L.latLng(26.336192, 127.800726), // 出発
+			L.latLng(26.292814, 127.77723) // 到着
 		]
 	}).addTo(map);
 
 	// ルート探索 線のスタイル変更
 	L.Routing.control({
 		waypoints: [
-			L.latLng(26.319017, 127.793763), // プラザハウスショッピングセンター
-			L.latLng(26.292814, 127.77723) // 普天満宮
+			L.latLng(26.336192, 127.800726), // 出発
+			L.latLng(26.292814, 127.77723) // 到着
 		],
 		lineOptions: {
 			styles: [
@@ -61,7 +61,7 @@ h1 { font-size: 5vw; margin: 0; }
 
 </style></head><body>
 
-<h1>77番那覇バスターミナル行き - egmapjs</h1>
+<h1>77番那覇バスターミナル行き</h1>
 <div id="mapid"></div>
 
 <img id=qrcode><script>addEventListener("load", () => qrcode.src = "https://chart.apis.google.com/chart?chs=140x140&cht=qr&chl=" + encodeURIComponent(document.location))</script><br>
