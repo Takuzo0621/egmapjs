@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width"/>
 
-<title>マップアプリA</title>
+<title>77番那覇バスターミナル行き</title>
 
 <link rel="apple-touch-icon" href="app-icon.png"/>
 <meta property="og:image" content="ogp-image.jpg"/>
@@ -21,22 +21,22 @@
 window.onload = function() {
 	var map = initMap('mapid')
 	map.setZoom(14)
-	map.panTo([ 35.943560,136.188917 ]) // 鯖江駅
-	map.addIcon(35.944571, 136.186228 , "Hana道場", "icon/hanadojo.png", 64)
+	map.panTo([ 26.336182, 127.800769 ]) // 現在地
+	map.addIcon(26.334913, 127.799374 , "コザミュージックタウン")
 
 	// ルート探索
 	L.Routing.control({
 		waypoints: [
-			L.latLng(35.943560,136.188917), // 鯖江駅
-			L.latLng(35.930609, 136.185646) // サンドーム福井
+			L.latLng(26.319017, 127.793763), // プラザハウスショッピングセンター
+			L.latLng(26.292814, 127.77723) // 普天満宮
 		]
 	}).addTo(map);
 
 	// ルート探索 線のスタイル変更
 	L.Routing.control({
 		waypoints: [
-			L.latLng(35.930609, 136.185646), // サンドーム福井
-			L.latLng(35.94271, 136.193065), // 秋吉鯖江店
+			L.latLng(26.319017, 127.793763), // プラザハウスショッピングセンター
+			L.latLng(26.292814, 127.77723) // 普天満宮
 		],
 		lineOptions: {
 			styles: [
@@ -61,7 +61,7 @@ h1 { font-size: 5vw; margin: 0; }
 
 </style></head><body>
 
-<h1>ルート探索サンプル - egmapjs</h1>
+<h1>77番那覇バスターミナル行き - egmapjs</h1>
 <div id="mapid"></div>
 
 <img id=qrcode><script>addEventListener("load", () => qrcode.src = "https://chart.apis.google.com/chart?chs=140x140&cht=qr&chl=" + encodeURIComponent(document.location))</script><br>
